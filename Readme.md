@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Павел Алешкевич](https://up.htmlacademy.ru/htmlcss/30/user/1202999).
-* Наставник: `Неизвестно`.
+* Наставник: `[Роман Ясель](https://htmlacademy.ru/profile/yasel)`.
 
 ---
 
