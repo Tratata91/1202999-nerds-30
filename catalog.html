@@ -7,7 +7,9 @@
 </head>
 <body>
   <header>
-    <img src="https://via.placeholder.com/150x100" width="160" height="65" alt="Nerds logotype">
+    <a href="index.html">
+      <img src="https://via.placeholder.com/150x100" width="160" height="65" alt="Nerds logotype">
+    </a>
     <nav>
       <ul>
         <li><a href="#" title="студия">студия</a></li>
@@ -33,11 +35,11 @@
         </fieldset>
         <fieldset>
           <legend>сетка:</legend>
-          <input type="radio" id="adaptive" name="adaptive">
+          <input type="radio" id="adaptive" name="layout-types" checked>
           <label for="adaptive">Адаптивная</label>
-          <input type="radio" id="fixed" name="fixed">
+          <input type="radio" id="fixed" name="layout-types">
           <label for="fixed">Фиксированная</label>
-          <input type="radio" id="responsive" name="responsive">
+          <input type="radio" id="responsive" name="layout-types">
           <label for="responsive">Резиновая</label>
         </fieldset>
         <fieldset>
@@ -53,8 +55,8 @@
           <input type="checkbox"  id="shopping-cart" name="shopping-cart">
           <label for="shopping-cart">Корзина</label>
         </fieldset>
+        <button type="submit">показать</button>
       </form>
-      <button type="button">показать</button>
     </section>
     <section>
       <h2>Продуктовые карточки</h2>
@@ -71,76 +73,98 @@
             <button type="button">по названию</button>
           </li>
           <li>
-            <button type="button">стрелка вверх</button>
+            <button type="button">по возрастанию</button>
           </li>
           <li>
-            <button type="button">стрелка вниз</button>
+            <button type="button">по убыванию</button>
           </li>
         </ul>
       </div>
       <div class="prod-cards">
-        <div class="card">
-          <img src="https://via.placeholder.com/150x100" alt="#" class="prod-main">
-          <div class="card-hover">
-            <h3>SEDONA</h3>
-            <span>Информационный сайт для туристов</span>
-            <button type="button">9 900 ₽</button>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/150x100" alt="#" class="prod-main">
-          <div class="card-hover">
-            <h3>PINK APP</h3>
-            <span>Продуктовый лендинг<br>приложения для iOS и Android</span>
-            <button type="button">9 900 ₽</button>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/150x100" alt="#" class="prod-main">
-          <div class="card-hover">
-            <h3>BARBERSHOP</h3>
-            <span>Сайт салона красоты.<br>Для мужчин, да.</span>
-            <button type="button">9 900 ₽</button>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/150x100" alt="#" class="prod-main">
-          <div class="card-hover">
-            <h3>MISHKA</h3>
-            <span>Интернет-магазин<br>вязаных игрушек</span>
-            <button type="button">9 900 ₽</button>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/150x100" alt="#" class="prod-main">
-          <div class="card-hover">
-            <h3>A PLUS</h3>
-            <span>Лендинг курсов повышения квалификации</span>
-            <button type="button">9 900 ₽</button>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/150x100" alt="#" class="prod-main">
-          <div class="card-hover">
-            <h3>КВАСТ</h3>
-            <span>Промо-сайт производителя<br>крафтового кваса</span>
-            <button type="button">9 900 ₽</button>
-          </div>
-        </div>
+        <ul>
+          <li class="card">
+            <img src="https://via.placeholder.com/150x100" alt="#" class="prod-main">
+            <div class="card-hover">
+              <a href="#" title="SEDONA и type="button"н формационный сайт">
+                <h3>SEDONA</h3>
+              </a>
+              <span>Информационный сайт для туристов</span>
+              <button type="button">9 900 ₽</button>
+            </div>
+          </li>
+          <li class="card">
+            <img src="https://via.placeholder.com/150x100" alt="#" class="prod-main">
+            <div class="card-hover">
+              <a href="#" title="PINK APP продуктовый лендинг">
+                <h3>PINK APP</h3>
+              </a>
+              <span>Продуктовый лендинг<br>приложения для iOS и Android</span>
+              <button type="button">9 900 ₽</button>
+            </div>
+          </li>
+          <li class="card">
+            <img src="https://via.placeholder.com/150x100" alt="#" class="prod-main">
+            <div class="card-hover">
+              <a href="#" title="BARBERSHOP салон красоты">
+                <h3>BARBERSHOP</h3>
+              </a>
+              <span>Сайт салона красоты.<br>Для мужчин, да.</span>
+              <button type="button">9 900 ₽</button>
+            </div>
+          </li>
+          <li class="card">
+            <img src="https://via.placeholder.com/150x100" alt="#" class="prod-main">
+            <div class="card-hover">
+              <a href="#" title="MISHKA интернет-магазин">
+                <h3>MISHKA</h3>
+              </a>
+              <span>Интернет-магазин<br>вязаных игрушек</span>
+              <button type="button">9 900 ₽</button>
+            </div>
+          </li>
+          <li class="card">
+            <img src="https://via.placeholder.com/150x100" alt="#" class="prod-main">
+            <div class="card-hover">
+              <a href="#" title="A PLUS лендинг курсов">
+                <h3>A PLUS</h3>
+              </a>
+              <span>Лендинг курсов повышения квалификации</span>
+              <button type="button">9 900 ₽</button>
+            </div>
+          </li>
+          <li class="card">
+            <img src="https://via.placeholder.com/150x100" alt="#" class="prod-main">
+            <div class="card-hover">
+              <a href="#" title="КВАСТ промо-сайт">
+                <h3>КВАСТ</h3>
+              </a>
+              <span>Промо-сайт производителя<br>крафтового кваса</span>
+              <button type="button">9 900 ₽</button>
+            </div>
+          </li>
+        </ul>
       </div>
       <div class="page-select">
         <ul>
           <li>
-            <button>1</button>
+            <button type="button">
+              <a href="#">1</a>
+            </button>
           </li>
           <li>
-            <button>2</button>
+            <button type="button">
+              <a href="#">2</a>
+            </button>
           </li>
           <li>
-            <button>3</button>
+            <button type="button">
+              <a href="#">3</a>
+            </button>
           </li>
           <li>
-            <button>следующая</button>
+            <button type="button">
+              <a href="#">следующая</a>
+            </button>
           </li>
         </ul>
       </div>
@@ -149,7 +173,7 @@
       <h2>Карта</h2>
       <div class="map">
       <span>Карта</span>
-      <!-- место для карты -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533268!2d30.320858716070596!3d59.938716481876156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1613580328203!5m2!1sru!2sby" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
       <div class="map-info">
         <span>NЁRDS DESIGN STUDIO</span>
