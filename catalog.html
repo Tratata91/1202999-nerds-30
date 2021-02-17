@@ -29,17 +29,17 @@
           <legend>стоимость:</legend>
           <input type="range" min="0" max="15000">
           <label for="min-price">от</label>
-          <input type="number" id="min-price" value="0" min="0" max="15000">
+          <input type="number" name="min-price" id="min-price" value="0" min="0" max="15000">
           <label for="max-price">до</label>
-          <input type="number" id="max-price" value="15000" min="0" max="15000">
+          <input type="number" name="max-price" id="max-price" value="15000" min="0" max="15000">
         </fieldset>
         <fieldset>
           <legend>сетка:</legend>
-          <input type="radio" id="adaptive" name="layout-types" checked>
+          <input type="radio" id="adaptive" name="layout-types" value="adaptive" checked>
           <label for="adaptive">Адаптивная</label>
-          <input type="radio" id="fixed" name="layout-types">
+          <input type="radio" id="fixed" name="layout-types" value="fixed">
           <label for="fixed">Фиксированная</label>
-          <input type="radio" id="responsive" name="layout-types">
+          <input type="radio" id="responsive" name="layout-types" value="responsive">
           <label for="responsive">Резиновая</label>
         </fieldset>
         <fieldset>
@@ -85,7 +85,7 @@
           <li class="card">
             <img src="https://via.placeholder.com/150x100" alt="#" class="prod-main">
             <div class="card-hover">
-              <a href="#" title="SEDONA и type="button"н формационный сайт">
+              <a href="#" title="SEDONA информационный сайт">
                 <h3>SEDONA</h3>
               </a>
               <span>Информационный сайт для туристов</span>
@@ -147,24 +147,16 @@
       <div class="page-select">
         <ul>
           <li>
-            <button type="button">
-              <a href="#">1</a>
-            </button>
+            <a href="#">1</a>
           </li>
           <li>
-            <button type="button">
-              <a href="#">2</a>
-            </button>
+            <a href="#">2</a>
           </li>
           <li>
-            <button type="button">
-              <a href="#">3</a>
-            </button>
+            <a href="#">3</a>
           </li>
           <li>
-            <button type="button">
-              <a href="#">следующая</a>
-            </button>
+            <a href="#">следующая</a>
           </li>
         </ul>
       </div>
