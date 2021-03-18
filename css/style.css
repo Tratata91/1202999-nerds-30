@@ -1032,20 +1032,28 @@ li {
   z-index: 3;
 }
 
-/* .popup-center{
-
-} */
+.popup-center{
+  position: relative;
+}
 
 
 .popup {
-  position: relative;
-  display: flex;
+  position: absolute;
+  bottom: -17px;
+  left: 280px;
   flex-wrap: wrap;
   margin: 0 auto;
   align-items: center;
   width: 960px;
   height: 590px;
+  background-color: var(--basic-white);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: none;
+  z-index: 5;
+}
+
+.popup-visible {
+  display: flex;
 }
 
 .map-info span {
@@ -1070,6 +1078,45 @@ li {
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
+.button-close {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  top: 78px;
+  right: 90px;
+  cursor: pointer;
+}
+
+.button-close::before,
+.button-close::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  background-color: var(--light-red);
+  opacity: 30%;
+  overflow: hidden;
+}
+
+.button-close::before {
+  transform: rotateZ(-45deg);
+}
+
+.button-close::after {
+  transform: rotateZ(45deg);
+}
+
+.button-close:hover::before,
+.button-close:hover::after {
+  opacity: 1;
+}
+
+.button-close:active::before,
+.button-close:active::after {
+  opacity: 10%;
+}
 
 .wrapper-popup {
   width: 760px;
@@ -1126,10 +1173,22 @@ li {
 }
 
 .popup-data input,
-.popup-text textarea {
+.user-comment {
   border-radius: 3px;
   color: rgba(68, 68, 68, 0.5);
   border: 1px solid var(--basic-gray);
+}
+
+.popup-data input:hover,
+.user-comment:hover {
+  border: 1px solid var(--second-gray);
+}
+
+.popup-data input:focus,
+.user-comment:focus {
+  border-radius: 3px;
+  color: #444444;
+  border: 1px solid var(--basic-black);
 }
 
 .user-comment {
