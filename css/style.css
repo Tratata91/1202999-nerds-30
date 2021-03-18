@@ -1036,10 +1036,17 @@ li {
 
 } */
 
+
 .popup {
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  align-items: center;
+  width: 960px;
+  height: 590px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-
 
 .map-info span {
   font-size: 18px;
@@ -1063,15 +1070,6 @@ li {
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
-.popup {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  align-items: center;
-  width: 960px;
-  height: 590px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
 
 .wrapper-popup {
   width: 760px;
@@ -1118,20 +1116,28 @@ li {
 }
 
 .popup-data input {
-  width: 352px;
-  height: 44px;
-}
-
-.email-popup {
-  align-self: flex-end;
+  width: 322px;
+  height: 12px;
+  padding: 16px 14px 16px 16px;
 }
 
 .popup-text label {
   display: block;
 }
 
+.popup-data input,
+.popup-text textarea {
+  border-radius: 3px;
+  color: rgba(68, 68, 68, 0.5);
+  border: 1px solid var(--basic-gray);
+}
+
 .user-comment {
-  width: 754px;
+  width: 738px;
+  height: 98px;
+  padding-top: 16px;
+  padding-left: 16px;
+  resize: none;
 }
 
 .button-submit {
@@ -1139,6 +1145,16 @@ li {
   height: 50px;
   background-color: var(--light-red);
   margin-top: 47px;
+}
+
+.button-submit:hover {
+  background-color: var(--basic-red);
+}
+
+.button-submit:active {
+  background-color: var(--dark-red);
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
 .main-footer {
