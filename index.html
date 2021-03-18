@@ -57,9 +57,9 @@
           <img src="img/nerds-index-slide3.png" alt="slider picture 3" width="760" height="430">
         </div>
         <div class="slider-radio">
-          <input type="radio" class="slider-radio-button hidden-input" checked>
-          <input type="radio" class="slider-radio-button hidden-input">
-          <input type="radio" class="slider-radio-button hidden-input">
+          <button type="button" class="slider-radio-button"></button>
+          <button type="button" class="slider-radio-button"></button>
+          <button type="button" class="slider-radio-button"></button>
         </div>
       </div>
     </section>
@@ -162,6 +162,7 @@
     <div class="map">
       <span class="hidden-text">Карта</span>
       <img src="./img/map.jpg" alt="Карта" width="1440" height="416">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1616055866530!5m2!1sru!2sby" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       <div class="wrapper">
         <div class="map-info">
           <div class="map-info-text">
@@ -197,25 +198,29 @@
     </div>
   </footer>
   <section>
-    <div class="popup">
-      <h2>Напишите нам</h2>
-      <form class="submit-form" action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label for="name">Ваше имя:</label>
-          <input id="name" type="text" name="name" placeholder="Имя Фамилия">
-        </p>
-        <p>
-          <label for="email">Ваш email:</label>
-          <input id="email" type="email" name="email" placeholder="email@example.com">
-        </p>
-        <p>
-          <label for="user-text">Текст письма:</label>
-          <textarea name="user-comment" id="user-text" cols="30" rows="10">В свободной форме</textarea>
-        </p>
-        <button class="button button-submit" type="submit">Отправить</button>
-      </form>
-      <button class="button-close" type="button">Закрыть</button>
-    </div>
+    <!-- <div class="popup-center"> -->
+      <div class="popup">
+        <div class="wrapper-popup">
+          <h2 class="popup-heading">Напишите нам</h2>
+          <form class="submit-form" action="https://echo.htmlacademy.ru" method="post">
+            <p class="popup-data">
+              <label for="name">Ваше имя:</label>
+              <input id="name" type="text" name="name" placeholder="Имя Фамилия">
+            </p>
+            <p class="popup-data email-popup">
+              <label for="email">Ваш email:</label>
+              <input id="email" type="email" name="email" placeholder="email@example.com">
+            </p>
+            <p class="popup-text">
+              <label for="user-text">Текст письма:</label>
+              <textarea class="user-comment" name="user-comment" id="user-text" cols="30" rows="6">В свободной форме</textarea>
+            </p>
+            <button class="button button-submit" type="submit">Отправить</button>
+          </form>
+          <button class="button-close js-popup-close" type="button">Закрыть</button>
+        </div>
+      </div>
+    <!-- </div> -->
   </section>
 </body>
 </html>
