@@ -31,6 +31,14 @@ popupClose.addEventListener("click", function(evt){
 });
 
 popupForm.addEventListener("submit", function(evt){
+
+  if (!userName.value) {
+    console.log(userName)
+  }
+  // userName.classList.add("invalid");
+});
+
+popupForm.addEventListener("submit", function(evt){
   if (!userName.value || !userEmail.value) {
     evt.preventDefault();
     popupMain.classList.remove("popup-error");
@@ -42,6 +50,7 @@ popupForm.addEventListener("submit", function(evt){
     }
   }
 });
+
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {

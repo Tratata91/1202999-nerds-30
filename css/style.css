@@ -25,7 +25,11 @@
   font-family: "Roboto", Arial, sans-serif;
   background-position: top center;
   background-repeat: no-repeat;
+}
 
+.main-container {
+  width: 1440px;
+  margin: 0 auto;
 }
 
 .wrapper {
@@ -72,10 +76,14 @@ li {
 
 .button:active {
   outline: 0;
+  text-transform: uppercase;
+  border-radius: 3px;
 }
 
 .button:focus {
   outline: 0;
+  text-transform: uppercase;
+  border-radius: 3px;
 }
 
 .fieldset {
@@ -174,12 +182,12 @@ li {
 }
 
 .fieldset-features {
-  margin-top: 22px;
+  margin-top: 25px;
 }
 
 .range-filter {
   width: 260px;
-  margin-top: 49px;
+  margin-top: 47px;
 }
 
 .range-controls {
@@ -251,7 +259,7 @@ li {
 }
 
 .layouts-list, .features-list {
-  padding: 3px 0 0 35px;
+  padding: 2px 0 0 35px;
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
@@ -298,24 +306,24 @@ li {
   content: '';
   display: block;
   position: absolute;
-  top: -3px;
-  left: -43px;
+  top: -4px;
+  left: -36px;
   width: 23px;
   height: 23px;
   background-image: url(../img/checkbox.svg);
-  z-index: -1;
+  z-index: -15;
 }
 
 .features-item-checkbox:checked + label::before {
   content: '';
   display: block;
   position: absolute;
-  top: -3px;
+  top: -4px;
   left: -36px;
-  width: 24px;
-  height: 24px;
+  width: 23px;
+  height: 23px;
   background-image: url(../img/checkbox-checked.svg);
-  z-index: -1;
+  z-index: 15;
 }
 
 .features-item-checkbox:focus + label::before,
@@ -348,7 +356,7 @@ li {
 .features-item-checkbox:checked + label::after {
   content: '';
   position: absolute;
-  top: -1px;
+  top: -2px;
   left: -33px;
   width: 21px;
   height: 17px;
@@ -534,7 +542,7 @@ li {
 }
 
 .card-hover a {
-  padding-top: 6px;
+  padding-top: 4px;
 }
 
 .card-hover a:hover {
@@ -749,11 +757,11 @@ li {
 
 .slider-radio {
   position: absolute;
-  left: 7px;
-  right: 0;
-  bottom: 96px;
+  left: 536px;
+  bottom: 100px;
   text-align: center;
   display: block;
+  width: 88px;
 }
 
 .slider-radio-button {
@@ -766,13 +774,16 @@ li {
   background-color: var(--basic-white);
 }
 
+.slider-radio-button:nth-child(1n+2) {
+  margin-left: 12px;
+}
+
 .slider-radio-button:active,
 .slider-radio-button:focus {
   outline: none;
 }
 
-.slider-radio-button:active::before,
-.slider-radio-button:focus::before {
+.first-slide::before {
   content: '';
   position: absolute;
   top: 4.85px;
@@ -780,6 +791,18 @@ li {
   width: 8px;
   height: 8px;
   background-image: url(../img/ellipse.svg);
+}
+
+.second-slide::before,
+.third-slide::before {
+  content: '';
+  position: absolute;
+  top: 4.85px;
+  left: 4.85px;
+  width: 8px;
+  height: 8px;
+  background-image: url(../img/ellipse.svg);
+  visibility: hidden;
 }
 
 .main-card::after {
@@ -920,6 +943,7 @@ li {
   font-size: 45px;
   line-height: 45px;
   padding-top: 4px;
+  color: #283136;
 }
 
 .description p {
@@ -949,6 +973,7 @@ li {
 .orders-list-item {
   display: flex;
   align-items: center;
+  color: #283136;
 }
 
 .orders-list-item:nth-child(1n+2) {
@@ -1022,6 +1047,7 @@ li {
   line-height: 18px;
   margin: 0;
   padding-top: 11px;
+  color: #283136;
 }
 
 .adv-list-p {
@@ -1173,11 +1199,12 @@ li {
 }
 
 .map-info-text {
-  padding-top: 49px;
+  padding-top: 46px;
 }
 
 .map-info-text p {
   padding-top: 8px;
+  color: #666666;
 }
 
 .button-popup {
@@ -1296,16 +1323,26 @@ li {
   display: block;
 }
 
-.popup-data input,
+.popup-data input {
+  border-radius: 2px;
+  color: rgba(68, 68, 68, 0.5);
+  border: 2px solid var(--basic-gray);
+}
+
 .user-comment {
-  border-radius: 3px;
+  border-radius: 2px;
   color: rgba(68, 68, 68, 0.5);
   border: 2px solid var(--basic-gray);
 }
 
 .popup-data input:hover,
 .user-comment:hover {
-  border: 1px solid var(--second-gray);
+  border: 2px solid var(--second-gray);
+}
+
+.invalid {
+  border: 2px solid var(--basic-red);
+  color: var(--basic-red);
 }
 
 .popup-data input:focus,
@@ -1385,7 +1422,7 @@ li {
 }
 
 .footer-text p {
-  margin: 75px 0 0 0;
+  margin: 72px 0 0 0;
   font-size: 36px;
   font-weight: 700;
   line-height: 36px;
@@ -1396,4 +1433,5 @@ li {
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
+  color: #444444;
 }
