@@ -23,7 +23,7 @@
           <path fill-rule="evenodd" clip-rule="evenodd" d="M113.207 27.161C112.726 29.6539 112.354 32.1666 112.092 34.692C111.033 44.752 111.48 53.688 112.705 57.678C113.431 59.815 116.162 62.624 118.783 59.701C121.626 56.498 124.75 58.352 120.957 62.117C118.617 64.422 114.268 65.995 109.918 65.545C106.795 65.152 104.9 63.13 103.784 60.04C103.34 60.938 102.837 61.725 102.224 62.342C100.105 64.535 97.539 65.772 94.25 65.434C87.613 64.704 83.712 57.511 85.551 47.281C87.503 36.49 96.87 32.556 102.279 35.424C102.391 34.075 102.502 32.725 102.614 31.32C102.642 31.1795 102.655 31.039 102.669 30.8985C102.683 30.758 102.697 30.6175 102.724 30.477C101.079 30.8387 99.424 31.1575 97.762 31.433C73.787 35.423 82.04 15.864 87.894 10.75C94.53 5.017 95.254 8.895 93.191 10.188C89.511 12.548 87.894 26.093 98.432 26.093C100.161 26.093 101.778 25.981 103.394 25.812C106.685 7.49 116.665 -1.391 124.75 1.532C133.726 4.792 132.779 19.067 113.207 27.161ZM102.279 51.554C102.055 48.012 102.055 44.022 102.112 39.918C102.112 39.6576 102.127 39.3974 102.141 39.1449C102.155 38.9068 102.168 38.6754 102.168 38.457C98.822 36.939 95.533 42.11 94.695 49.249C93.749 57.622 97.483 62.062 99.603 60.04C101.22 58.409 102.056 53.237 102.279 51.554ZM126.365 8.389C124.581 5.747 118.058 8.951 114.267 22.721C123.802 18.167 127.593 10.299 126.365 8.389Z" fill="black"/>
         </svg>
       </a>
-      <ul class="site-navigation">
+      <ul class="site-navigation catalog-nav">
         <li class="site-nav-item"><a href="#" title="студия">студия</a></li>
         <li class="site-nav-item"><a href="#" title="клиенты">клиенты</a></li>
         <li class="site-nav-item active"><a href="catalog.html" title="магазин">магазин</a></li>
@@ -39,7 +39,7 @@
     <section>
       <h2 class="hidden-heading">Левый сайдбар</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="filter-item fieldset">
+        <fieldset class="fieldset filter-item">
           <legend class="legend">Стоимость:</legend>
           <div class="range-filter">
             <div class="range-controls">
@@ -229,13 +229,37 @@
     <div class="map">
       <span class="hidden-text">Карта</span>
       <img src="./img/map.jpg" alt="Карта" width="1440" height="416">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1616055866530!5m2!1sru!2sby" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       <div class="wrapper">
         <div class="map-info">
-          <span>NЁRDS DESIGN STUDIO</span>
-          <p>191186, Санкт-Петербург, <br>ул. Б. Конюшенная, д. 19/8<br><br><a class="contacts-phone" href="tel:+78122757575" title="телефон">тел. +7 (812) 275-75-75</a></p>
-          <button type="button" class="button button-popup">напишите нам</button>
+          <div class="map-info-text">
+            <span>NЁRDS DESIGN STUDIO</span>
+            <p>191186, Санкт-Петербург, <br>ул. Б. Конюшенная, д. 19/8<br><br><a class="contacts-phone" href="tel:+78122757575" title="телефон">тел. +7 (812) 275-75-75</a></p>
+            <button type="button" class="button button-popup">напишите нам</button>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
+  <section class="popup">
+    <div class="wrapper-popup">
+      <h2 class="popup-heading">Напишите нам</h2>
+      <form class="submit-form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="popup-data">
+          <label for="name">Ваше имя:</label>
+          <input class="js-name" id="name" type="text" name="name" placeholder="Имя Фамилия">
+        </p>
+        <p class="popup-data">
+          <label for="email">Ваш email:</label>
+          <input class="js-email" id="email" type="email" name="email" placeholder="email@example.com">
+        </p>
+        <p class="popup-text">
+          <label for="user-text">Текст письма:</label>
+          <textarea class="user-comment" name="user-comment" id="user-text" cols="30" rows="5" placeholder="В свободной форме"></textarea>
+        </p>
+        <button class="button button-submit" type="submit">Отправить</button>
+      </form>
+      <span class="button-close" title="Закрыть" area-label="Закрыть"></span>
     </div>
   </section>
   <footer class="main-footer wrapper">
@@ -261,26 +285,6 @@
       <span>Скидка 10% для друзей из социальных сетей.</span>
     </div>
   </footer>
-  <section>
-    <div class="popup">
-      <h2>Напишите нам</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label for="name">Ваше имя:</label>
-          <input id="name" type="text" name="name" placeholder="Имя Фамилия">
-        </p>
-        <p>
-          <label for="email">Ваш email:</label>
-          <input id="email" type="email" name="email" placeholder="email@example.com">
-        </p>
-        <p>
-          <label for="user-text">Текст письма:</label>
-          <textarea name="user-comment" id="user-text" cols="30" rows="10">В свободной форме</textarea>
-        </p>
-        <button type="submit">Отправить</button>
-      </form>
-      <button type="button">Закрыть</button>
-    </div>
-  </section>
+  <script src="./js/login.js"></script>
 </body>
 </html>
