@@ -31,11 +31,11 @@ popupClose.addEventListener("click", function(evt){
 });
 
 popupForm.addEventListener("submit", function(evt){
-
-  if (!userName.value) {
+  if (!userName.value || !userEmail.value) {
     console.log(userName)
+    userName.classList.add("invalid");
+    userEmail.classList.add("invalid");
   }
-  // userName.classList.add("invalid");
 });
 
 popupForm.addEventListener("submit", function(evt){
