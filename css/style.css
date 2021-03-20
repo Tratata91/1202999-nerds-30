@@ -331,7 +331,6 @@
   width: 23px;
   height: 23px;
   background-image: url(../img/checkbox.svg);
-  z-index: -15;
 }
 
 .features-item-checkbox:checked + label::before {
@@ -343,7 +342,6 @@
   width: 23px;
   height: 23px;
   background-image: url(../img/checkbox-checked.svg);
-  z-index: 15;
 }
 
 .features-item-checkbox:focus + label::before,
@@ -598,6 +596,7 @@
   line-height: 18px;
   background-color: var(--light-gray);
   cursor: pointer;
+  overflow: hidden;
 }
 
 .page-select-list {
@@ -1051,6 +1050,7 @@
   font-weight: 700;
   line-height: 64px;
   padding-top: 14px;
+  overflow: hidden;
 }
 
 .dedication-level {
