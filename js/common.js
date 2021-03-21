@@ -15,8 +15,8 @@ try {
 }
 
 popupOpen.addEventListener("click", function(evt){
+  evt.preventDefault();
   popupMain.classList.add("popup-visible");
-
   if (storage) {
     userName.value = storage;
     userEmail.focus();
